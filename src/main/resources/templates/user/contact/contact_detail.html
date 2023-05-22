@@ -1,0 +1,95 @@
+<div id="content" class="col-sm-9" ng-app="contact-app"
+	ng-controller="contact-ctrl">
+	
+	<!-- </th:block> -->
+	<hr class="contact-width">
+
+	<h1 class="page_title title">Liên hệ chúng tôi</h1>
+	<div class="row">
+		<div class="col-sm-12">
+			<h3 class="contact-title">Vị trí</h3>
+		</div>
+		<div class="col-lg-5 col-md-3 col-sm-12 col-xs-12 contact-left">
+			<div class="content-details">
+				<div class="location-info">
+					<div class="location-title title">
+						<i class="fa fa-home"></i> Cửa hàng
+					</div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8015517378785!2d108.16727751982116!3d16.0757845464997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218e6e07b1c3f%3A0x459e4bf5a2af323e!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYyDEkMOgIE7hurVuZw!5e0!3m2!1svi!2s!4v1670393285159!5m2!1svi!2s" width="555" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="phone-info">
+					<div class="phone-title title">
+						<i class="fa fa-mobile"></i> Di động
+					</div>
+					<div class="content-number">0789487777</div>
+				</div>
+				<div class="fax-info">
+					<div class="fax-title title">
+						<i class="fa fa-fax"></i> Fax
+					</div>
+					<div class="fax-number">09418634623</div>
+				</div>
+				<div class="openstore-info">
+					<div class="open-title title">
+						<i class="fa fa-clock-o"></i> Thời gian làm việc
+					</div>
+					<div class="openstore-detail">8h đến 17h30</div>
+				</div>
+				<div class="comment-info">
+					<div class="comment-title title">
+						<i class="fa fa-comments-o"></i> Bình luận
+					</div>
+					<div class="comment-detail">Xin vui lòng để lại ý kiến đánh
+						giá cửa hàng.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-7 col-md-9 col-sm-12 col-xs-12 contact-right">
+			<div id="notification" style="display: none;"
+				class="alert alert-dismissible">
+
+				<button type="button" class="close" data-dismiss="alert">×</button>
+			</div>
+			<form
+				action="https://opencart.mahardhi.com/MT05/ecart/02/index.php?route=information/contact"
+				method="post" enctype="multipart/form-data" class="form-horizontal">
+				<fieldset>
+					<legend>Đánh Giá</legend>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-name">Tên:</label>
+						<div class="col-sm-10">
+							<input type="text" name="name" id="input-name"
+								class="form-control">
+						</div>
+					</div>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-email">E-Mail:
+						</label>
+						<div class="col-sm-10">
+							<input type="email" name="email" id="input-email"
+								class="form-control">
+						</div>
+					</div>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label" for="input-review">Ý
+							kiến:</label>
+						<div class="col-sm-10">
+							<textarea name="text" rows="10" id="input-review"
+								class="form-control"></textarea>
+						</div>
+					</div>
+
+				</fieldset>
+				<div class="buttons clearfix">
+					<div class="pull-right">
+						<button type="button" id="button-review" th:onclick="addContact()"
+							class="btn btn-primary">Xác nhận</button>
+					</div>
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+</div>

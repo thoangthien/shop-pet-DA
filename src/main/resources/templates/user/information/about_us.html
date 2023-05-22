@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/user/layout/_form :: dynamic(
+            ~{::main},
+            ~{::#aside},
+            ~{::#material},
+            ~{::#breadcums}
+            )}">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+	<th:block id="breadcums">
+		<ul class="breadcrumb">
+			<li><a th:href="@{/index}">Trang chủ</a></li>
+			<li><a th:href="@{/aboutUs}">Về chúng tôi</a></li>
+		</ul>
+	</th:block>
+
+	<th:block id="aside">
+		<div th:replace="/user/home/our_testimonial.html"></div>
+		<div th:replace="/user/account/account_aside"></div>		
+	</th:block>
+
+	<main>
+
+
+		<div id="content" class="col-sm-9">
+			<h1>Thông tin</h1>
+			<div class="about-us clearfix shop-content">
+				<div class="col-sm-12">
+					<div class="cms-block">
+						<h4>Chúng ta là ai?</h4>
+						<p>
+							Như mọi người ai cũng biết, <strong>CoCo pet</strong> là một chuỗi
+							pet shop thú cưng Thức ăn chó mèo tài Đà Nẵng với hệ thống nhiều chi nhánh của hàng thứ cưng
+							chuyên cung cấp đồ dùng thức ăn , phụ kiện thú cưng . Cùng nhiều bài viết chia sẻ kinh nghiệm châm 
+							sóc chó mèo tại Đà Nẵng .
+							
+
+						</p>
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+
+
+	</main>
+</body>
+</html>
